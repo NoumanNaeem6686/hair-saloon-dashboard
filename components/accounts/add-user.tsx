@@ -50,7 +50,7 @@ export const AddUser = () => {
       }
 
       const response = await axios.post(
-        `https://hair-saloon-backend.vercel.app/api/user/book-appointment`,
+        `${process.env.NEXT_PUBLIC_BACKEND_ENDPOINT}api/user/book-appointment`,
         formData
       );
       console.log("Customer added successfully:", response.data);

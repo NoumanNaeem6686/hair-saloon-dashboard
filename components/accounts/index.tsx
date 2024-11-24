@@ -16,7 +16,7 @@ export const Accounts = () => {
     const fetchBookings = async () => {
       try {
         const response = await axios.get(
-          "https://hair-saloon-backend.vercel.app/api/user/appointments"
+          `${process.env.NEXT_PUBLIC_BACKEND_ENDPOINT}api/user/appointments`
         );
         console.log("Bookings:", response.data);
         setBookings(response.data.appointments); // Assuming response.data is an array of bookings

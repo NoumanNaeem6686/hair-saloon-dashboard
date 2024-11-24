@@ -25,7 +25,7 @@ export const Availability = () => {
     const fetchUnavailabilities = async () => {
       try {
         const response = await axios.get(
-          "https://hair-saloon-backend.vercel.app/api/user/get-all-unavailability"
+          `${process.env.NEXT_PUBLIC_BACKEND_ENDPOINT}api/user/get-all-unavailability`
         );
         console.log("Unavailabilities:", response.data.unavailabilitySlots);
         setUnavailabilities(response.data.unavailabilitySlots || []); // Default to an empty array if no data
@@ -62,7 +62,7 @@ export const Availability = () => {
 
       try {
         const response = await axios.post(
-          "https://hair-saloon-backend.vercel.app/api/user/add-unavailability",
+          `${process.env.NEXT_PUBLIC_BACKEND_ENDPOINT}api/user/add-unavailability`,
           unavailabilityData
         );
 

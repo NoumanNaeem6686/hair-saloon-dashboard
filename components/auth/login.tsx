@@ -25,7 +25,7 @@ export const Login = () => {
         setLoading(true); // Set loading state to true when request starts
         // Make a POST request to the backend API for login
         const response = await axios.post(
-          `${process.env.NEXT_PUBLIC_BACKEND_ENDPOINT}/api/admin/signInAdmin`,
+          `${process.env.NEXT_PUBLIC_BACKEND_ENDPOINT}api/admin/signInAdmin`,
           {
             email: values.email,
             password: values.password,
